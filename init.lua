@@ -11,3 +11,9 @@ require("plugins.toggleterm")
 vim.cmd([[
     au VimLeave * lua require('toggleterm').close_all()
 ]])
+
+-- Set autoclose
+require("autoclose").setup()
+
+
+

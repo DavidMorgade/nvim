@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
 
   -- Color scheme
-  { "catppuccin/nvim", as = "catppuccin" },
+  { "catppuccin/nvim",               as = "catppuccin" },
 
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -29,10 +29,12 @@ require('lazy').setup({
       "nvim-tree/nvim-web-devicons",
     },
     config = function()
-        require("nvim-tree").setup {}
-      end,
+      require("nvim-tree").setup {}
+    end,
   },
 
+  -- autoclose brackerts
+  {'m4xshen/autoclose.nvim'},
   -- Save and load buffers (a session) automatically for each folder
   {
     'rmagatti/auto-session',
@@ -53,14 +55,28 @@ require('lazy').setup({
   },
 
   -- Visualize buffers as tabs
-  {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+  { 'akinsho/bufferline.nvim',    version = "*", dependencies = 'nvim-tree/nvim-web-devicons' },
 
   --GithubCopilot
-  {'github/copilot.vim'},
+  { 'github/copilot.vim' },
   -- The Primeagen Vim be Good
-  {'ThePrimeagen/vim-be-good'},
+  { 'ThePrimeagen/vim-be-good' },
   -- Terminal for neovim
-  {'akinsho/nvim-toggleterm.lua'},
+  { 'akinsho/nvim-toggleterm.lua' },
+  -- wich key
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  },
   -- LSP zero
   {
     'VonHeikemen/lsp-zero.nvim',
@@ -84,7 +100,7 @@ require('lazy').setup({
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {
-      {'L3MON4D3/LuaSnip'},
+      { 'L3MON4D3/LuaSnip' },
     },
     config = function()
       -- Here is where you configure the autocompletion settings.
@@ -96,7 +112,7 @@ require('lazy').setup({
       local cmp_action = lsp_zero.cmp_action()
 
       cmp.setup({
-        formatting = lsp_zero.cmp_format({details = true}),
+        formatting = lsp_zero.cmp_format({ details = true }),
         mapping = cmp.mapping.preset.insert({
           ['<C-Space>'] = cmp.mapping.complete(),
           ['<C-u>'] = cmp.mapping.scroll_docs(-4),
@@ -111,11 +127,11 @@ require('lazy').setup({
   -- LSP
   {
     'neovim/nvim-lspconfig',
-    cmd = {'LspInfo', 'LspInstall', 'LspStart'},
-    event = {'BufReadPre', 'BufNewFile'},
+    cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'williamboman/mason-lspconfig.nvim'},
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'williamboman/mason-lspconfig.nvim' },
     },
     config = function()
       -- This is where all the LSP shenanigans will live
@@ -127,7 +143,7 @@ require('lazy').setup({
       lsp_zero.on_attach(function(client, bufnr)
         -- see :help lsp-zero-keybindings
         -- to learn the available actions
-        lsp_zero.default_keymaps({buffer = bufnr})
+        lsp_zero.default_keymaps({ buffer = bufnr })
       end)
 
       require('mason-lspconfig').setup({
