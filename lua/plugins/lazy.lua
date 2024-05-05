@@ -59,6 +59,8 @@ require('lazy').setup({
   {'github/copilot.vim'},
   -- The Primeagen Vim be Good
   {'ThePrimeagen/vim-be-good'},
+  -- Terminal for neovim
+  {'akinsho/nvim-toggleterm.lua'},
   -- LSP zero
   {
     'VonHeikemen/lsp-zero.nvim',

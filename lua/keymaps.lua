@@ -11,5 +11,5 @@ vim.keymap.set("n", "<leader>x", ":bd<cr>") -- close buffer
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 -- paste from clipboard
 vim.keymap.set("n", "<leader>p", [["+p]])
--- Format code
--- vim.keymap.set("n", "<leader>f", ":Neoformat<cr>")
+-- Go out from terminal mode
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
