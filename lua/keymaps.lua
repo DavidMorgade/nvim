@@ -9,3 +9,7 @@ vim.keymap.set("n", "<leader>p", ":bp<cr>") -- previous buffer
 vim.keymap.set("n", "<leader>x", ":bd<cr>") -- close buffer
 -- yank to clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+-- paste from clipboard
+vim.keymap.set("n", "<leader>p", [["+p]])
+-- Format code
+-- vim.keymap.set("n", "<leader>f", ":Neoformat<cr>")

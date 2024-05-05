@@ -5,6 +5,7 @@ vim.keymap.set("n", "<leader>sg", ":Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>s.", ":Telescope oldfiles<cr>")
 -- tree
 vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<cr>")
-vim.keymap.set("n", "<leader>f", ":NvimTreeFocus<cr>")
 -- nvim-comment
 vim.keymap.set({"n", "v"}, "<leader>/", ":CommentToggle<cr>")
+-- format document
+vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format)
