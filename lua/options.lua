@@ -18,7 +18,6 @@ vim.opt.incsearch = true -- show search results as you type
 vim.opt.scrolloff = 8 -- minimum number of lines to keep above and below the cursor
 vim.opt.sidescrolloff = 8 -- minimum number of columns to keep to the left and right of the cursor
 
-vim.cmd.nvim_set_hl(0, "Normal", {bg = "none"}) -- set background color to none
 
 vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
   pattern = {"*.js", "*.html", "*.css", "*.lua"},

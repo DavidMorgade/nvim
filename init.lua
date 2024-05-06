@@ -4,7 +4,7 @@ require("plugins.lazy")
 require("plugins.keymaps")
 require("plugins.options")
 require("plugins.toggleterm")
-
+require("plugins.saveandformat")
 
 
 -- Save the state of the terminal
