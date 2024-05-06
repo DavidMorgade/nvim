@@ -34,7 +34,7 @@ require('lazy').setup({
   },
 
   -- autoclose brackerts
-  {'m4xshen/autoclose.nvim'},
+  { 'm4xshen/autoclose.nvim' },
   -- Save and load buffers (a session) automatically for each folder
   {
     'rmagatti/auto-session',
@@ -63,6 +63,27 @@ require('lazy').setup({
   { 'ThePrimeagen/vim-be-good' },
   -- Terminal for neovim
   { 'akinsho/nvim-toggleterm.lua' },
+  --Compile and run commands
+  { -- This plugin
+    "Zeioth/compiler.nvim",
+    cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo" },
+    dependencies = { "stevearc/overseer.nvim" },
+    opts = {},
+  },
+  { -- The task runner we use
+    "stevearc/overseer.nvim",
+    commit = "68a2d344cea4a2e11acfb5690dc8ecd1a1ec0ce0",
+    cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo" },
+    opts = {
+      task_list = {
+        direction = "bottom",
+        min_height = 25,
+        max_height = 25,
+        default_detail = 1
+      },
+    },
+  },
+
   -- wich key
   {
     "folke/which-key.nvim",
