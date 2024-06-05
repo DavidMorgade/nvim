@@ -13,6 +13,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  --React syntax highlight
+  { 'maxmellon/vim-jsx-pretty' },
 
   -- Color scheme
   { "catppuccin/nvim",               as = "catppuccin" },

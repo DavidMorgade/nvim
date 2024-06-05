@@ -14,19 +14,3 @@ vim.cmd([[
 
 -- Set autoclose
 require("autoclose").setup()
-
--- autocmd change directory to the current file
-
-local api = vim.api
-local fn = vim.fn
-
-api.nvim_create_augroup("WorkingDirectory", { clear = true })
-api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "*.*" },
-  callback = function()
-    local path = fn.expand('%:h') .. '/'
-    path = "cd " .. path
-    api.nvim_command(path)
-  end,
-  group = "WorkingDirectory",
-})
