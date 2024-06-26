@@ -13,6 +13,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  -- tpope surround
+  { 'tpope/vim-surround' },
   --React syntax highlight
   { 'maxmellon/vim-jsx-pretty' },
 

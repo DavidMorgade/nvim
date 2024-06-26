@@ -6,7 +6,6 @@ require("plugins.options")
 require("plugins.toggleterm")
 require("plugins.saveandformat")
 
-
 -- Save the state of the terminal
 vim.cmd([[
     au VimLeave * lua require('toggleterm').close_all()

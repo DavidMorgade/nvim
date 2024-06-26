@@ -7,24 +7,25 @@ vim.api.nvim_set_keymap('n', '<leader>le', ':Telescope lsp_document_diagnostics<
 -- tree
 vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<cr>")
 -- nvim-comment
-vim.keymap.set({"n", "v"}, "<leader>/", ":CommentToggle<cr>")
+vim.keymap.set({ "n", "v" }, "<leader>/", ":CommentToggle<cr>")
 -- format document
 vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format)
 -- toggle terminal remap
-vim.keymap.set("n", "<leader>t", ":lua require('toggleterm').toggle()<cr>")
+vim.keymap.set("n", "<leader>tt", ":lua require('toggleterm').toggle()<cr>")
 -- toggle terminal remap in terminal mode
-vim.keymap.set("t", "<leader>t", "<C-\\><C-n>:lua require('toggleterm').toggle()<cr>")
+vim.keymap.set("t", "<leader>tt", "<C-\\><C-n>:lua require('toggleterm').toggle()<cr>")
 
-
+--show lsp error
+vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
 -- Compiler.nvim keymaps
 -- Open compiler
 vim.api.nvim_set_keymap('n', '<F6>', "<cmd>CompilerOpen<cr>", { noremap = true, silent = true })
 
 -- Redo last selected option
 vim.api.nvim_set_keymap('n', '<S-F6>',
-     "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
+  "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
   .. "<cmd>CompilerRedo<cr>",
- { noremap = true, silent = true })
+  { noremap = true, silent = true })
 
 -- Toggle compiler results
 vim.api.nvim_set_keymap('n', '<S-F7>', "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true })
