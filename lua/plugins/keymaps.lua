@@ -5,7 +5,7 @@ vim.keymap.set("n", "<leader>sg", ":Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>s.", ":Telescope oldfiles<cr>")
 vim.api.nvim_set_keymap('n', '<leader>le', ':Telescope lsp_document_diagnostics<CR>', { noremap = true, silent = true })
 -- tree
-vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<cr>")
+vim.keymap.set("n", "<leader>m", ":NvimTreeFindFileToggle<cr>")
 -- nvim-comment
 vim.keymap.set({ "n", "v" }, "<leader>/", ":CommentToggle<cr>")
 -- format document
@@ -14,6 +14,8 @@ vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>tt", ":lua require('toggleterm').toggle()<cr>")
 -- toggle terminal remap in terminal mode
 vim.keymap.set("t", "<leader>tt", "<C-\\><C-n>:lua require('toggleterm').toggle()<cr>")
+-- toggle dashboard
+vim.keymap.set("n", "<leader>db", ":Dashboard<cr>")
 
 --show lsp error
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })

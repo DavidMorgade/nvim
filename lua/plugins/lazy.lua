@@ -30,6 +30,12 @@ require('lazy').setup({
             concat = 'Morgade'
           },
           shortcut = {
+            {
+              desc = 'Show Lazy',
+              group = 'Label',
+              action = 'Lazy',
+              key = 'l',
+            },
             { desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' },
             {
               icon = ' ',
@@ -40,16 +46,17 @@ require('lazy').setup({
               key = 'f',
             },
             {
-              desc = ' Apps',
-              group = 'DiagnosticHint',
-              action = 'Telescope app',
-              key = 'a',
+              desc = '  Mason',
+              group = 'Number',
+              action = 'Mason',
+              key = 'm',
             },
             {
-              desc = ' dotfiles',
+              icon = ' ',
+              desc = 'Search',
               group = 'Number',
-              action = 'Telescope dotfiles',
-              key = 'd',
+              action = 'Telescope live_grep',
+              key = 's',
             },
           },
         },
