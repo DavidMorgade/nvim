@@ -15,6 +15,21 @@ vim.opt.hlsearch = false      -- highlight search results
 vim.opt.incsearch = true      -- show search results as you type
 
 
+-- Config to use xsel as system clipboard
+vim.g.clipboard = {
+  name = 'xsel',
+  copy = {
+    ['+'] = 'xsel -selection clipboard',
+    ['*'] = 'xsel -selection primary',
+  },
+  paste = {
+    ['+'] = 'xsel -selection clipboard -o',
+    ['*'] = 'xsel -selection primary -o',
+  },
+  cache_enabled = 0,
+}
+
+
 
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = { "*.js", "*.html", "*.css", "*.lua" },
