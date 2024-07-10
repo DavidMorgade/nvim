@@ -5,6 +5,8 @@ require("plugins.keymaps")
 require("plugins.options")
 require("plugins.toggleterm")
 require("plugins.saveandformat")
+require("plugins.lsp-zero")
+require("plugins.lsp-cmp")
 
 -- Save the state of the terminal
 vim.cmd([[
