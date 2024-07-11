@@ -5,8 +5,8 @@ vim.api.nvim_set_keymap("n", "<Tab>", ">>", { noremap = true, silent = true })
 -- press shift tab in normal mode and actually untab the start of the line
 vim.api.nvim_set_keymap("n", "<S-Tab>", "<<", { noremap = true, silent = true })
 -- press leader o to inssrt new line and keep normal mode and leader shift to insert line on top
-vim.api.nvim_set_keymap("n", "<leader>o", "o<Esc>", { noremap = true, silent = true, desc = 'Insert Line' })
-vim.api.nvim_set_keymap("n", "<leader>O", "O<Esc>", { noremap = true, silent = true, desc = 'Insert Line' })
+vim.api.nvim_set_keymap("n", "<leader>o", "o<Esc>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>O", "O<Esc>", { noremap = true, silent = true })
 -- jj or kk in insert mode to escape
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "kk", "<Esc>", { noremap = true, silent = true })
