@@ -38,6 +38,8 @@ vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, { desc = 'Format File' })
 -- Go to utilities
 -- Go dashboard
 vim.keymap.set("n", "<leader>gd", ":Dashboard<cr>", { desc = 'Go to Dashboard' })
+-- Go to mason
+vim.keymap.set("n", "<leader>gm", ":Mason<cr>", { desc = 'Go to Mason' })
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,3 +54,27 @@ vim.api.nvim_set_keymap('n', '<S-F6>',
 
 -- Toggle compiler results
 vim.api.nvim_set_keymap('n', '<S-F7>', "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true })
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+-- LSP Keybinds
+-- Go to definition
+vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, { desc = 'Go to Definition' })
+-- Go to type definition
+vim.keymap.set("n", "<leader>lt", vim.lsp.buf.type_definition, { desc = 'Go to Type Definition' })
+-- Go to implementation
+vim.keymap.set("n", "<leader>li", vim.lsp.buf.implementation, { desc = 'Go to Implementation' })
+-- Go to references with telescope
+vim.keymap.set("n", "<leader>lm", ":Telescope lsp_references<cr>", { desc = 'Go to References' })
+-- Rename everywhere
+vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { desc = 'Rename Everywhere' })
+-- Go to next diagnostic
+vim.keymap.set("n", "<leader>ln", ":lua vim.diagnostic.goto_next()<cr>", { desc = 'Go to Next Diagnostic' })
+-- Go to previous diagnostic
+vim.keymap.set("n", "<leader>lp", ":lua vim.diagnostic.goto_prev()<cr>", { desc = 'Go to Previous Diagnostic' })
+-- Show hover information
+vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, { desc = 'Show Hover Information' })
+-- Show signature help
+vim.keymap.set("n", "<leader>ls", vim.lsp.buf.signature_help, { desc = 'Show Signature Help' })
+-- Show diagnostics
+vim.keymap.set("n", "<leader>ld", ":lua vim.diagnostic.open_float()<cr>", { desc = 'Show Diagnostics' })
