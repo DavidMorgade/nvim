@@ -1,9 +1,9 @@
 -- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Telescope search keybinds
-vim.keymap.set("n", "<leader>sf", ":Telescope find_files<cr>")
-vim.keymap.set("n", "<leader>sp", ":Telescope git_files<cr>")
-vim.keymap.set("n", "<leader>sg", ":Telescope live_grep<cr>")
-vim.keymap.set("n", "<leader>s.", ":Telescope oldfiles<cr>")
+vim.keymap.set("n", "<leader>sf", ":Telescope find_files<cr>", { desc = 'Find Normal Files' })
+vim.keymap.set("n", "<leader>sp", ":Telescope git_files<cr>", { desc = 'Find Git Files' })
+vim.keymap.set("n", "<leader>sg", ":Telescope live_grep<cr>", { desc = 'Find Word' })
+vim.keymap.set("n", "<leader>s.", ":Telescope oldfiles<cr>", { desc = 'Find Old Files' })
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
