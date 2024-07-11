@@ -20,6 +20,8 @@ require('lazy').setup({
   { 'tpope/vim-surround' },
   --React syntax highlight
   { 'maxmellon/vim-jsx-pretty' },
+  -- Prisma syntax highlight
+  { 'prisma/vim-prisma' },
   -- Great start screen
   {
     'nvimdev/dashboard-nvim',
@@ -87,6 +89,17 @@ require('lazy').setup({
   },
   -- Color scheme
   { "catppuccin/nvim",               as = "catppuccin" },
+  -- Project create + telescope projects
+  {
+    'ahmedkhalf/project.nvim',
+    config = function()
+      require('project_nvim').setup {
+        patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", "Cargo.toml", "go.mod" },
+        ignore_lsp = { "efm", "sumneko_lua", "tsserver" },
+      }
+    end,
+    requires = { 'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim' }
+  },
 
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },

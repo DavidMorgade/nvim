@@ -4,8 +4,8 @@ vim.g.mapleader = " "
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "kk", "<Esc>", { noremap = true, silent = true })
 -- buffers
-vim.keymap.set("n", "<leader>n", ":bn<cr>") -- next buffer
-vim.keymap.set("n", "<leader>p", ":bp<cr>") -- previous buffer
+vim.keymap.set("n", "<leader>,", ":bn<cr>") -- next buffer
+vim.keymap.set("n", "<leader>;", ":bp<cr>") -- previous buffer
 vim.keymap.set("n", "<leader>x", ":bd<cr>") -- close buffer
 -- yank to clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
@@ -15,3 +15,5 @@ vim.keymap.set("n", "<leader>p", [["+p]])
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 -- Save file using leader fs and also forma>")t it
 vim.api.nvim_set_keymap('n', '<Leader>fs', ':lua FormatAndSave()<CR>', { noremap = true, silent = true })
+-- Add current route as project root
+vim.api.nvim_set_keymap('n', '<Leader>ar', ':ProjectRoot', { noremap = true, silent = true })
