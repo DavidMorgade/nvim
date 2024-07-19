@@ -1,10 +1,12 @@
 -- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Telescope search keybinds
 vim.keymap.set("n", "<leader>sf", ":Telescope find_files<cr>", { desc = 'Find Normal Files' })
+-- Add this on a vim keybind Telescope find_files find_command=rg,--ignore,--hidden,--files,-u
+vim.keymap.set("n", "<leader>sh", ":Telescope find_files find_command=rg,--ignore,--hidden,--files,-u<cr>", { desc = 'Find Normal Files' })
 vim.keymap.set("n", "<leader>sg", ":Telescope git_files<cr>", { desc = 'Find Git Files' })
 vim.keymap.set("n", "<leader>sw", ":Telescope live_grep<cr>", { desc = 'Find Word' })
 vim.keymap.set("n", "<leader>s.", ":Telescope oldfiles<cr>", { desc = 'Find Old Files' })
--- Search projects with telescope and open them with nvim-tree
+-- Search projects with telescope and open them with nvim-tree 
 vim.keymap.set("n", "<leader>sp", ":Telescope projects<cr>", { desc = 'Find Projects' })
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

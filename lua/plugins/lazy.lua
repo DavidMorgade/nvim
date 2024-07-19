@@ -114,6 +114,7 @@ require('lazy').setup({
     {
       "catppuccin/nvim",
       name = "catppuccin",
+      flavour = "frappe",
       priority = 1000,
       opts = {
         term_colors = true,
@@ -123,6 +124,9 @@ require('lazy').setup({
           shade = "dark",
           percentage = 0.15, -- percentage of the shade to apply to the inactive window
         },
+        no_bold = false,
+        no_italic = false,
+        no_underline = false,
         integrations = {
           cmp = true,
           gitsigns = true,
