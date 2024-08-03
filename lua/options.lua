@@ -8,26 +8,13 @@ vim.opt.smartindent = true    -- insert indents automatically
 vim.opt.autoindent = true     -- copy indent from current line when starting a new line
 vim.opt.list = true           -- show some invisible characters (tabs...)
 
-vim.opt.ignorecase = true     -- ignore case in search patterns
-vim.opt.smartcase = true      -- override the 'ignorecase' option if the search pattern contains upper case characters
+vim.api.nvim_set_option("clipboard", "unnamedplus")
 
-vim.opt.hlsearch = false      -- highlight search results
-vim.opt.incsearch = true      -- show search results as you type
+vim.opt.ignorecase = true -- ignore case in search patterns
+vim.opt.smartcase = true  -- override the 'ignorecase' option if the search pattern contains upper case characters
 
-
--- Config to use xsel as system clipboard
-vim.g.clipboard = {
-  name = 'xsel',
-  copy = {
-    ['+'] = 'xsel -selection clipboard',
-    ['*'] = 'xsel -selection primary',
-  },
-  paste = {
-    ['+'] = 'xsel -selection clipboard -o',
-    ['*'] = 'xsel -selection primary -o',
-  },
-  cache_enabled = 0,
-}
+vim.opt.hlsearch = false  -- highlight search results
+vim.opt.incsearch = true  -- show search results as you type
 
 
 
