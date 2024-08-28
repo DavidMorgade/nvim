@@ -16,6 +16,13 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require('lazy').setup({
+  --  live server
+  {
+        'barrett-ruth/live-server.nvim',
+        build = 'pnpm add -g live-server',
+        cmd = { 'LiveServerStart', 'LiveServerStop' },
+        config = true
+  },
   -- tpope surround
   { 'tpope/vim-surround' },
   --React syntax highlight
