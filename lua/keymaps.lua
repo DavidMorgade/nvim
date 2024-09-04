@@ -26,3 +26,6 @@ vim.api.nvim_set_keymap('n', '<Leader>fs', ':lua FormatAndSave()<CR>',
 -- Add current route as project root
 vim.api.nvim_set_keymap('n', '<Leader>er', ':ProjectRoot',
   { noremap = true, silent = true, desc = 'Set as Project Root' })
+-- Opens file on telescope on vsplit window
+vim.api.nvim_set_keymap('n', '<Leader>tvs', ':vsplit<CR>',
+  { noremap = true, silent = true, desc = 'Toggle Vertical Split' })
