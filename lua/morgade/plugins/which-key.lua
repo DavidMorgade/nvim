@@ -13,7 +13,8 @@ return {
       ["<leader>f"] = { name = "+File " },
       ["<leader>s"] = { name = "+Telecope Search" },
       ["<leader>l"] = { name = "+LSP Commands" },
-    }
+    },
+
   },
   config = function(_, opts)
     local wk = require("which-key")
