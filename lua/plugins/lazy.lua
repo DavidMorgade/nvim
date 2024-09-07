@@ -16,6 +16,21 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require('lazy').setup({
+  -- Copilot chat
+    {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "canary",
+    dependencies = {
+      { "github/copilot.vim" }, -- or github/copilot.vim
+      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+    },
+    build = "make tiktoken", -- Only on MacOS or Linux
+    opts = {
+      debug = true, -- Enable debugging
+      -- See Configuration section for rest
+    },
+    -- See Commands section for default commands if you want to lazy load on them
+  },
   --  live server
   {
         'barrett-ruth/live-server.nvim',
@@ -265,6 +280,7 @@ require('lazy').setup({
     opts = {
       defaults = {
         ["<leader>t"] = { name = "+Toggle" },
+        ["<leader>ta"] = { name = "+Toggle Ask Copilot" },
         ["<leader>g"] = { name = "+Go to" },
         ["<leader>f"] = { name = "+File " },
         ["<leader>s"] = { name = "+Telecope Search" },

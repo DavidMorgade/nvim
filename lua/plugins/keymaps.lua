@@ -35,6 +35,40 @@ vim.api.nvim_set_keymap('n', '<leader>tls', ':LiveServerStart<cr>',
 -- stop live server
 vim.api.nvim_set_keymap('n', '<leader>tlk', ':LiveServerStop<cr>',
   { noremap = true, silent = true, desc = 'Stop Live Server' })
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------CHAT COPILOT-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Toggle Copilot Chat
+vim.api.nvim_set_keymap('n', '<leader>tat', ':CopilotChatToggle<cr>',
+  { noremap = true, silent = true, desc = 'Toggle Copilot Chat' })
+-- Copilot chat open
+vim.api.nvim_set_keymap('n', '<leader>tao', ':CopilotChatOpen<cr>',
+  { noremap = true, silent = true, desc = 'Open Copilot Chat' })
+-- Copilot chat close
+vim.api.nvim_set_keymap('n', '<leader>tac', ':CopilotChatClose<cr>',
+  { noremap = true, silent = true, desc = 'Close Copilot Chat' })
+-- Copilot Chat Reset
+vim.api.nvim_set_keymap('n', '<leader>tar', ':CopilotChatReset<cr>',
+  { noremap = true, silent = true, desc = 'Reset Copilot Chat' })
+-- Copilot Save Chat
+vim.api.nvim_set_keymap('n', '<leader>tas', ':CopilotChatSave ',
+  { noremap = true, silent = true, desc = 'Save Copilot Chat' })
+-- Copilot load Chat
+vim.api.nvim_set_keymap('n', '<leader>tal', ':CopilotChatLoad ',
+  { noremap = true, silent = true, desc = 'Load Copilot Chat' })
+-- Copilot add docs
+vim.api.nvim_set_keymap('v', '<leader>taa', ':CopilotChatDocs<cr>',
+  { noremap = true, silent = true, desc = 'Add Docs to Copilot Chat' })
+-- Copilot chat optimize
+vim.api.nvim_set_keymap('v', '<leader>tao', ':CopilotChatOptimize<cr>',
+  { noremap = true, silent = true, desc = 'Optimize Copilot Chat' })
+-- Copilot add test
+vim.api.nvim_set_keymap('v', '<leader>tat', ':CopilotChatTest<cr>',
+  { noremap = true, silent = true, desc = 'Add Test to Copilot Chat' })
+  -- Copilot chat review
+vim.api.nvim_set_keymap('v', '<leader>tar', ':CopilotChatReview<cr>',
+  { noremap = true, silent = true, desc = 'Review Copilot Chat' })
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
