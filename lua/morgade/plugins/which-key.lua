@@ -1,4 +1,3 @@
-local mini_icons = require("mini.icons")
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
@@ -7,6 +6,16 @@ return {
     vim.o.timeoutlen = 300
   end,
   opts  = {
+    preset = 'modern',
+    win = {
+      height = { min = 10, max = 40 },
+      width = { min = 60, max = 100 },
+      border = 'single',
+    },
+    layout = {
+      width = { min = 20, max = 50 },
+      spacing = 3,
+    },
     icons = {
       -- set icon mappings to true if you have a Nerd Font
       mappings = vim.g.have_nerd_font,
@@ -17,7 +26,7 @@ return {
         Down = '<Down> ',
         Left = '<Left> ',
         Right = '<Right> ',
-        C = '<C-…> ',
+        -- C = '<C-…> ',
         M = '<M-…> ',
         D = '<D-…> ',
         S = '<S-…> ',
@@ -43,14 +52,14 @@ return {
         F12 = '<F12>',
       },
     },
-    -- Document existing key chains
+    -- Document existing key chains with icons
     spec = {
-      { '<leader>t', group = '[T]oggle', icon = '' },
-      { '<leader>f', group = '[F]ile', mode = { 'n', 'x' }, icon = '󱂷' },
-      { '<leader>s', group = '[S]earch with Telescope', icon = '' },
-      { '<leader>g', group = '[G]o to ...' },
-      { '<leader>e', group = '[E]nemy Keys' },
-      { '<leader>l', group = '[L]sp Utilities' },
+      { '<leader>t', group = 'Toggle', icon = '' }, -- Example icon
+      { '<leader>f', group = 'File', mode = { 'n', 'x' }, icon = '' }, -- Example icon
+      { '<leader>s', group = 'Search with Telescope', icon = '' }, -- Example icon
+      { '<leader>g', group = 'Go to ...', icon = '' }, -- Example icon
+      { '<leader>e', group = '[E]nemy Keys', icon = '' }, -- Example icon
+      { '<leader>l', group = 'Lsp Utilities', icon = '' }, -- Example icon
     },
   }
 }
