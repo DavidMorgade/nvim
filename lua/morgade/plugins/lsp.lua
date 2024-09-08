@@ -21,8 +21,13 @@ return {
 
     require('mason-lspconfig').setup({
       ensure_installed = {
-        'pyright', -- python
-        'ts_ls',   -- js, ts
+        'pyright',     -- python
+        'lua_ls',      -- lua
+        'tailwindcss', -- tailwindcss
+        'jsonls',      -- json
+        'html',        -- html
+        'cssls',       -- css
+
       },
       handlers = {
         lsp_zero.default_setup,
