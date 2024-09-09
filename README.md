@@ -8,7 +8,6 @@
 
 ### Code
 
-```markdown
 # Neovim Configuration
 
 This repository contains my personal Neovim configuration, optimized for efficiency and ease of use. Below are the key bindings and plugins used in this setup.
