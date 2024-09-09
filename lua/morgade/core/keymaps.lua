@@ -101,6 +101,9 @@ vim.api.nvim_set_keymap('v', '<leader>tat', ':CopilotChatTest<cr>',
 -- Copilot chat review
 vim.api.nvim_set_keymap('v', '<leader>tar', ':CopilotChatReview<cr>',
   { noremap = true, silent = true, desc = 'Review Copilot Chat' })
+-- QuickCHat bufer copilot
+vim.api.nvim_set_keymap('n', '<leader>tab', ':lua QuickChatCopilot()<cr>',
+  { noremap = true, silent = true, desc = 'Quick Chat Copilot on Buffer' })
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

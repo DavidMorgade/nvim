@@ -1,2 +1,2 @@
-require("morgade.core")
 require("morgade.lazy")
+require("morgade.core")
