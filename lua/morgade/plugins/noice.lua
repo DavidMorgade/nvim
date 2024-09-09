@@ -11,6 +11,9 @@ return {
       signature = {
         enabled = false,
       },
+    },
+    presets = {
+      bottom_search = true,
     }
   },
   dependencies = {

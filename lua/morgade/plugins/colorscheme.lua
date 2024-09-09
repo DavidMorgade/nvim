@@ -5,7 +5,7 @@ return {
   opts = {
     color_overrides = {
       -- changing mocha theme to be a pinky theme
-      mocha = {
+      frappe = {
         text = "#F4CDE9",
         subtext1 = "#DEBAD4",
         subtext0 = "#C8A6BE",
@@ -67,6 +67,6 @@ return {
   },
   config = function(_, opts)
     require("catppuccin").setup(opts)
-    vim.cmd.colorscheme("catppuccin-macchiato")
+    vim.cmd.colorscheme("catppuccin-mocha")
   end,
 }
