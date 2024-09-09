@@ -54,12 +54,12 @@ return {
     },
     -- Document existing key chains with icons
     spec = {
-      { '<leader>t', group = 'Toggle', icon = '' }, -- Example icon
-      { '<leader>f', group = 'File', mode = { 'n', 'x' }, icon = '' }, -- Example icon
-      { '<leader>s', group = 'Search with Telescope', icon = '' }, -- Example icon
-      { '<leader>g', group = 'Go to ...', icon = '' }, -- Example icon
+      { '<leader>t', group = '[T]oggle', icon = '' }, -- Example icon
+      { '<leader>f', group = '[F]ile', mode = { 'n', 'x' }, icon = '' }, -- Example icon
+      { '<leader>s', group = '[S]earch with Telescope', icon = '' }, -- Example icon
+      { '<leader>g', group = '[G]o to ...', icon = '' }, -- Example icon
       { '<leader>e', group = '[E]nemy Keys', icon = '' }, -- Example icon
-      { '<leader>l', group = 'Lsp Utilities', icon = '' }, -- Example icon
+      { '<leader>l', group = '[L]sp Utilities', icon = '' }, -- Example icon
     },
   }
 }

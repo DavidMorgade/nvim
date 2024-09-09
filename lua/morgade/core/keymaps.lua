@@ -5,8 +5,8 @@ vim.api.nvim_set_keymap("n", "<Tab>", ">>", { noremap = true, silent = true })
 -- press shift tab in normal mode and actually untab the start of the line
 vim.api.nvim_set_keymap("n", "<S-Tab>", "<<", { noremap = true, silent = true })
 -- press leader o to inssrt new line and keep normal mode and leader shift to insert line on top
-vim.api.nvim_set_keymap("n", "<leader>o", "o<Esc>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>O", "O<Esc>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>o", "o<Esc>", { noremap = true, silent = true, desc = "Insert Line Below" })
+vim.api.nvim_set_keymap("n", "<leader>O", "O<Esc>", { noremap = true, silent = true, desc = "Insert Line Above" })
 -- jj or kk in insert mode to escape
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "kk", "<Esc>", { noremap = true, silent = true })
@@ -17,7 +17,7 @@ vim.keymap.set("n", "<leader>x", ":bd<cr>") -- close buffer
 -- yank to clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 -- paste from clipboard
-vim.keymap.set("n", "<leader>p", [["+p]])
+vim.keymap.set("n", "<leader>p", [["+p]], { desc = "Paste from Clipboard" })
 -- Go out from terminal mode
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 -- Save file using leader fs and also forma>")t it
@@ -31,7 +31,7 @@ vim.api.nvim_set_keymap('n', '<Leader>tvs', ':vsplit<CR>',
   { noremap = true, silent = true, desc = 'Toggle Vertical Split' })
 
 
-  -- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Telescope search keybinds
 vim.keymap.set("n", "<leader>sf", ":Telescope find_files<cr>", { desc = 'Find Normal Files' })
 -- Add this on a vim keybind Telescope find_files find_command=rg,--ignore,--hidden,--files,-u
@@ -98,7 +98,7 @@ vim.api.nvim_set_keymap('v', '<leader>tao', ':CopilotChatOptimize<cr>',
 -- Copilot add test
 vim.api.nvim_set_keymap('v', '<leader>tat', ':CopilotChatTest<cr>',
   { noremap = true, silent = true, desc = 'Add Test to Copilot Chat' })
-  -- Copilot chat review
+-- Copilot chat review
 vim.api.nvim_set_keymap('v', '<leader>tar', ':CopilotChatReview<cr>',
   { noremap = true, silent = true, desc = 'Review Copilot Chat' })
 

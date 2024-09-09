@@ -27,6 +27,7 @@ return {
         'jsonls',      -- json
         'html',        -- html
         'cssls',       -- css
+        'gopls',       -- go
 
       },
       handlers = {

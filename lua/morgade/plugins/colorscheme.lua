@@ -15,7 +15,6 @@ return {
         surface2 = "#705867",
         surface1 = "#5A4551",
         surface0 = "#44313B",
-
         base = "#352939",
         mantle = "#211924",
         crust = "#1a1016",
