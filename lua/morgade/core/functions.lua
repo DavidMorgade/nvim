@@ -36,3 +36,23 @@ end
 -- Map the custom picker to a keybinding
 vim.api.nvim_set_keymap('n', '<leader>sc', ':lua search_copilot_conversations()<CR>',
   { noremap = true, silent = true, desc = "[S]earch Copilot Conversations" })
+
+
+-- quick copilot chat
+function QuickChatCopilot()
+  local input = vim.fn.input("Quick Chat: ")
+  if input ~= "" then
+    require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+  end
+end
+
+-- Define a key mapping to trigger the reformatting and saving
+
+-- Function to perform formatting and saving
+function FormatAndSave()
+  -- Format the current buffer using LSP
+  vim.lsp.buf.format()
+
+  -- Save the current buffer
+  vim.cmd('w')
+end
