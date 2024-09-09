@@ -1,13 +1,3 @@
-### Plan
-
-1. **Introduction**: Briefly describe the purpose of the Neovim configuration.
-2. **Installation**: Provide steps to install the configuration.
-3. **Key Bindings**: List and describe the key bindings.
-4. **Plugins**: Mention any plugins used in the configuration.
-5. **Customization**: Explain how to customize the configuration.
-
-### Code
-
 # Neovim Configuration
 
 This repository contains my personal Neovim configuration, optimized for efficiency and ease of use. Below are the key bindings and plugins used in this setup.
