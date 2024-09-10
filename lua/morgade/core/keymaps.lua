@@ -59,6 +59,9 @@ vim.keymap.set({ "n", "v" }, "<leader>tc", ":CommentToggle<cr>", { desc = 'Comme
 -- toogle diagnostic - LSP
 vim.api.nvim_set_keymap('n', '<space>td', '<cmd>lua vim.diagnostic.open_float()<CR>',
   { noremap = true, silent = true, desc = 'Toggle LSP Diagnostic Window' })
+-- toggle zen mode
+vim.api.nvim_set_keymap('n', '<leader>tz', ':ZenMode<cr>',
+  { noremap = true, silent = true, desc = 'Toggle Zen Mode' })
 -- toggle compiler "tgcc"
 vim.api.nvim_set_keymap('n', '<leader>tgcc', "<cmd>CompilerOpen<cr>",
   { noremap = true, silent = true, desc = 'Toggle Compiler' })
