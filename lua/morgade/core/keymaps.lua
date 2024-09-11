@@ -30,7 +30,6 @@ vim.api.nvim_set_keymap('n', '<Leader>er', ':ProjectRoot',
 vim.api.nvim_set_keymap('n', '<Leader>tvs', ':vsplit<CR>',
   { noremap = true, silent = true, desc = 'Toggle Vertical Split' })
 
-
 -- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Telescope search keybinds
 vim.keymap.set("n", "<leader>sf", ":Telescope find_files<cr>", { desc = 'Find Normal Files' })
@@ -133,6 +132,7 @@ vim.api.nvim_set_keymap('n', '<S-F6>',
   "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
   .. "<cmd>CompilerRedo<cr>",
   { noremap = true, silent = true, desc = 'Redo last selected option' })
+
 
 -- Toggle compiler results
 vim.api.nvim_set_keymap('n', '<S-F7>', "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true })

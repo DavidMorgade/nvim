@@ -17,6 +17,11 @@ vim.opt.hlsearch = false  -- highlight search results
 vim.opt.incsearch = true  -- show search results as you type
 
 
+-- keep the cursor in the middle of the screen
+vim.o.scrolloff = 999
+
+
+
 
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = { "*.js", "*.html", "*.css", "*.lua" },

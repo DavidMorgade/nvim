@@ -56,3 +56,10 @@ function FormatAndSave()
   -- Save the current buffer
   vim.cmd('w')
 end
+
+
+
+
+
+
+
