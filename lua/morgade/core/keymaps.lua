@@ -1,9 +1,5 @@
 -- space bar leader key
 vim.g.mapleader = " "
--- press tab in normal mode and actually tab the start of the line
-vim.api.nvim_set_keymap("n", "<Tab>", ">>", { noremap = true, silent = true })
--- press shift tab in normal mode and actually untab the start of the line
-vim.api.nvim_set_keymap("n", "<S-Tab>", "<<", { noremap = true, silent = true })
 -- press leader o to inssrt new line and keep normal mode and leader shift to insert line on top
 vim.api.nvim_set_keymap("n", "<leader>o", "o<Esc>", { noremap = true, silent = true, desc = "Insert Line Below" })
 vim.api.nvim_set_keymap("n", "<leader>O", "O<Esc>", { noremap = true, silent = true, desc = "Insert Line Above" })
@@ -106,6 +102,45 @@ vim.api.nvim_set_keymap('v', '<leader>tar', ':CopilotChatReview<cr>',
 -- QuickCHat bufer copilot
 vim.api.nvim_set_keymap('n', '<leader>tab', ':lua QuickChatCopilot()<cr>',
   { noremap = true, silent = true, desc = 'Quick Chat Copilot on Buffer' })
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------Tab Bars---------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Tab Bar Keybinds
+-- Tab Bar Next using left control + tab
+vim.api.nvim_set_keymap('n', '<C-Tab>', ':BufferNext<cr>',
+  { noremap = true, silent = true, desc = 'Next Tab' })
+-- Tab Bar Previous using shift + tab
+vim.api.nvim_set_keymap('n', '<S-Tab>', ':BufferPrevious<cr>',
+  { noremap = true, silent = true, desc = 'Previous Tab' })
+-- Tab Bar Close
+vim.api.nvim_set_keymap('n', '<leader>tc', ':BufferClose<cr>',
+  { noremap = true, silent = true, desc = 'Close Tab' })
+-- Restore Buffer
+vim.api.nvim_set_keymap('n', '<leader>tr', ':BufferRestore<cr>',
+  { noremap = true, silent = true, desc = 'Restore Tab' })
+-- Go to Tab 1, 2, 3 with leader + 1, 2, 3, etc
+vim.api.nvim_set_keymap('n', '<leader>1', ':BufferGoto 1<cr>',
+  { noremap = true, silent = true, desc = 'Go to Tab 1' })
+vim.api.nvim_set_keymap('n', '<leader>2', ':BufferGoto 2<cr>',
+  { noremap = true, silent = true, desc = 'Go to Tab 2' })
+vim.api.nvim_set_keymap('n', '<leader>3', ':BufferGoto 3<cr>',
+  { noremap = true, silent = true, desc = 'Go to Tab 3' })
+vim.api.nvim_set_keymap('n', '<leader>4', ':BufferGoto 4<cr>',
+  { noremap = true, silent = true, desc = 'Go to Tab 4' })
+vim.api.nvim_set_keymap('n', '<leader>5', ':BufferGoto 5<cr>',
+  { noremap = true, silent = true, desc = 'Go to Tab 5' })
+vim.api.nvim_set_keymap('n', '<leader>6', ':BufferGoto 6<cr>',
+  { noremap = true, silent = true, desc = 'Go to Tab 6' })
+vim.api.nvim_set_keymap('n', '<leader>7', ':BufferGoto 7<cr>',
+  { noremap = true, silent = true, desc = 'Go to Tab 7' })
+vim.api.nvim_set_keymap('n', '<leader>8', ':BufferGoto 8<cr>',
+  { noremap = true, silent = true, desc = 'Go to Tab 8' })
+vim.api.nvim_set_keymap('n', '<leader>9', ':BufferGoto 9<cr>',
+  { noremap = true, silent = true, desc = 'Go to Tab 9' })
+-- Close all tabs
+vim.api.nvim_set_keymap('n', '<leader>tC', ':BufferCloseAllButCurrent<cr>',
+  { noremap = true, silent = true, desc = 'Close All Tabs except current' })
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
