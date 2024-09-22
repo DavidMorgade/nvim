@@ -18,7 +18,7 @@ return {
       -- to learn the available actions
       lsp_zero.default_keymaps({ buffer = bufnr })
     end)
-  
+
 
     require('mason-lspconfig').setup({
       ensure_installed = {

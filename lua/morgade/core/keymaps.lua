@@ -51,9 +51,6 @@ vim.keymap.set("t", "<leader>tt", "<C-\\><C-n>:lua require('toggleterm').toggle(
   { noremap = true, silent = true, desc = "Toggle Terminal" })
 -- toggle comment
 vim.keymap.set({ "n", "v" }, "<leader>tc", ":CommentToggle<cr>", { desc = 'Comment Code' })
--- toogle diagnostic - LSP
-vim.api.nvim_set_keymap('n', '<space>td', '<cmd>lua vim.diagnostic.open_float()<CR>',
-  { noremap = true, silent = true, desc = 'Toggle LSP Diagnostic Window' })
 -- toggle zen mode
 vim.api.nvim_set_keymap('n', '<leader>tz', ':ZenMode<cr>',
   { noremap = true, silent = true, desc = 'Toggle Zen Mode' })
@@ -66,6 +63,7 @@ vim.api.nvim_set_keymap('n', '<leader>tls', ':LiveServerStart<cr>',
 -- stop live server
 vim.api.nvim_set_keymap('n', '<leader>tlk', ':LiveServerStop<cr>',
   { noremap = true, silent = true, desc = 'Stop Live Server' })
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------CHAT COPILOT-----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -195,3 +193,5 @@ vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, { desc = 'Show Hover Inform
 vim.keymap.set("n", "<leader>ls", vim.lsp.buf.signature_help, { desc = 'Show Signature Help' })
 -- Show diagnostics
 vim.keymap.set("n", "<leader>ld", ":lua vim.diagnostic.open_float()<cr>", { desc = 'Show Diagnostics' })
+-- Toggle code actions
+vim.keymap.set("n", "<leader>la", ":lua vim.lsp.buf.code_action()<cr>", { desc = 'Toggle Code Actions' })
