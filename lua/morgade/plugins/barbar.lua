@@ -10,6 +10,8 @@ return
     -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
     -- animation = true,
     insert_at_start = false,
+    minimum_padding = 3,
+    maximum_padding = 3,
     -- …etc.
   },
   version = '^1.0.0', -- optional: only update when a new 1.x version is released
